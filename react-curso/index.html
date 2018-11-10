@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript Básico</title>
+
+</head>
+<body>
+    <h1>Básico de JS</h1>
+    <script>
+            /* const nome ="Rainan";
+            console.log(nome);
+            let idade = 20;
+            console.log(idade);
+            idade +=1;
+            console.log(idade); */
+        
+           /*  const numero = 1;
+            const text = '1';
+            console.log(numero === texto); */
+
+            const numeros = [1,2,3,4];
+            const pessoa = {nome : 'Rainan', idade:21};
+            const pessoa2 = {nome : 'Santos', idade:21};
+            const pessoas = [pessoa,pessoa2];
+            
+            //const rainan = pessoas.find(p => p.nome === 'Rainan');
+            //const rainans = pessoas.map(p => p.nome === 'Rainan' && p);
+
+            /* const soma = function (item){
+              numerosSomados.push(item + 1);
+            }
+            numeros.forEach(soma); */
+
+            ///numeros.forEach
+            //numeros.map
+            //numeros.filter
+            //numeros.find 
+
+            //numeros.forEach(item => numerosSomados.push(item + 1));
+            //const numerosSomados= numeros.map(item=> item + 1);
+            //const igualADoisnumeros = numeros.filter ( item => item %2 ==0);
+            //const encontreiOQuarto = numeros.find(otem => item == 4);
+           //console.log(rainan);
+           //console.log(numeros);
+           //console.log(rainans);
+           //console.log(console);
+           //console.error("Ocorreu uma erro DESGRAÇA!!!");
+           /* function print () {
+             return console.log;
+           } */
+
+           /* function soma5 (valor) {
+             return valor + 5;
+           }
+              */
+
+            //const log = print();
+            //log('ola');
+            
+            //console.log(numerosSomados);
+
+           /* function soma (type) {
+             if(type =='5'){
+               return valor => valor +5
+             }
+             return valor => valor - 5;
+           }
+
+            console.log(soma()(10)); */
+
+
+           /* class Aluno{
+             constructor(nome, matricula){
+               this.nome = nome;
+               this.matricula = matricula;
+             }
+
+             falarMatricula(){
+               console.log('Minha matricula é: ' + this.matricula);
+             }
+           }
+            
+           const rainan = new Aluno ('Rainan', 564);
+           rainan.falarMatricula(); */
+           
+           var outroNumero = 17;
+
+           const modulo = {
+             outroNumero: 42,
+             printOutroNumero: function() {return this.outroNumero},
+             
+           };
+           
+            const unbound = modulo.printOutroNumero;
+            console.log(unbound());
+
+            const bound = unbound.bind(modulo);
+            console.log(bound());
+            
+            
+        </script>
+</body>
+</html>

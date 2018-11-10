@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>React Root</title>
+    
+</head>
+<body>
+    <h1>React Root</h1>
+    <div id="app"> <button onclick="autoDestruicao()">Destruir</button> </div>
+    <button>Criar elemento</button>
+
+    <script>
+
+    function autoDestruicao(){
+        const root = document.getElementById('app');
+        const pai = root.parentNode;
+        console.log(pai);
+        pai.removeChild(root);
+        
+    }   
+    function criarElemento(){
+        const btn = document.createElement('button');
+        btn.onclick = criarElemento;//BTN TEM ATRIBUTO ONCLICK
+        const texto = document.createTextNode('Criar elemento');
+        btn.appendChild(texto);
+
+        const root = document.getElementById('app');
+        root.appendChild(btn);
+        console.log(btn);
+    }
+    criarElemento();
+    </script>
+
+</body>
+</html>
